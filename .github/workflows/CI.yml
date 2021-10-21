@@ -45,7 +45,7 @@ jobs:
           ./version_summary.sh
           chmod +x run.sh
       - name: build
-        run: . ./compile.sh
+        run: ./compile.sh
       - name: test  # TODO make this part run in parallel
         run: |
           ./run.sh rmg/aromatics no
