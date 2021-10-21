@@ -36,12 +36,12 @@ jobs:
       #    version: 1.5
       - name: before_install
         run: |
-          . ./before_install.sh
-          . ./color_define.sh
+          ./before_install.sh
+          ./color_define.sh
       - name: install
         run: |
-          . ./install.sh
-          . ./version_summary.sh
+          ./install.sh
+          ./version_summary.sh
           chmod +x run.sh
       - name: build
         run: . ./compile.sh
@@ -57,7 +57,7 @@ jobs:
       - name: finish  # TODO check that this works as expected for both success and failure
         run: |
           if [ ${{ job.status }} == 'success' ]; then
-            . ./after_success.sh
+            ./after_success.sh
           else
-            . ./after_failure.sh
+            ./after_failure.sh
           fi

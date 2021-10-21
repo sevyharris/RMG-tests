@@ -99,7 +99,7 @@ conda env list
 conda info
 
 cd $BASE_DIR
-tree
+tree -L 2
 
 
 # Get the conda environments from conda env list
