@@ -36,6 +36,7 @@ jobs:
       #    version: 1.5
       - name: before_install
         run: |
+          chmod +x *.sh
           ./before_install.sh
           ./color_define.sh
       - name: install
