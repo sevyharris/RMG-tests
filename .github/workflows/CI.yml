@@ -48,12 +48,19 @@ jobs:
       - name: test  # TODO make this part run in parallel
         run: |
           ./run.sh rmg/aromatics no
+          echo "aromatics status: ${?}"
           ./run.sh rmg/nitrogen no
+          echo "nitrogen status: ${?}"
           ./run.sh rmg/sulfur no
+          echo "sulfur status: ${?}"
           ./run.sh rmg/oxidation no
+          echo "oxidation status: ${?}"
           ./run.sh rmg/liquid_oxidation no
+          echo "liquid oxidation status: ${?}"
           ./run.sh rmg/superminimal no
+          echo "superminimal status: ${?}"
           ./run.sh examples/eg1 no
+          echo "eg1 status: ${?}"
       - name: finish  # TODO check that this works as expected for both success and failure
         run: |
           if [ ${{ job.status }} == 'success' ]; then

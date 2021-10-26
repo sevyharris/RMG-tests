@@ -2,7 +2,7 @@
 
 set -e # exit with nonzero exit code if anything fails
 
-echo "Executing after script tasks..."
+echo "Executing after script tasks (success) ..."
 
 ./ok.sh _format_json \
     state="success" \
