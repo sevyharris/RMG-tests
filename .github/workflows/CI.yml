@@ -68,7 +68,7 @@ jobs:
           ./run.sh examples/eg1 no
           eg1_status=$?
           echo "eg1 status: $eg1_status"
-          if [ $(($aromatics_status | $nitrogen_status | $sulfur_status | $oxidation_status | $liquid_oxidation_status | $superminimal_status | eg1_status)) -ne 0 ];
+          if [ $(($aromatics_status | $nitrogen_status | $sulfur_status | $oxidation_status | $liquid_oxidation_status | $superminimal_status | $eg1_status)) -ne 0 ];
           then
             echo "Failed regression tests"
             exit 1
